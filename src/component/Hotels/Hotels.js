@@ -42,7 +42,7 @@ const Hotels = () => {
             </div>
             
             <div className="ml-auto">
-                <MapGoogle></MapGoogle>
+                {/* <MapGoogle></MapGoogle> */}
             </div>
         </div>
     );

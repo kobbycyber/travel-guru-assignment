@@ -1,23 +1,28 @@
 import React from 'react';
-import GoogleMapReact from 'google-maps-react';
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 const MapGoogle = () => {
+  const google = window.google;
+const data = this.props.data;
+const center = this.props.center;
   return (
-    <div style={{ height: '100vh', width: '80%' }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyDy6MTf2nF4ScVrw1ekqNR-SMyWgzutBvA" }}
-          defaultCenter={{lat: 23.684994,
-            lng: 90.356331}}
-          defaultZoom={10}
-        >
-          {/* <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text="My Marker"
-          /> */}
-        </GoogleMapReact>
-      </div>
+    <div>
+      <Map google={this.props.google} zoom={10}>
+
+        <Marker onClick={this.onMarkerClick}
+          name={'Current location'} />
+
+        <InfoWindow onClose={this.onInfoWindowClose}>
+          <div>
+            <h1>{this.state.selectedPlace.name}</h1>
+          </div>
+        </InfoWindow>
+      </Map>
+    </div>
   );
 };
 
-export default MapGoogle;
+
+export default GoogleApiWrapper({
+  apiKey: ("AIzaSyDy6MTf2nF4ScVrw1ekqNR-SMyWgzutBvA")
+})(MapGoogle)
