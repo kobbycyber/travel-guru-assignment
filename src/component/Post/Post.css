@@ -1,0 +1,16 @@
+.card-item{
+    margin-top: 250px;
+  
+}
+.travel-place{
+    position: absolute;
+    /* bottom: 0; */
+    right: 0;
+     left: 0;
+    top: 0;
+    margin: auto;
+    
+}
+.btn{
+    background-color: orange;
+  }
