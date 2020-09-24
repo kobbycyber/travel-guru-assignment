@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-maps-react';
 
 const MapGoogle = () => {
   return (
-    <div style={{ height: '100vh', width: '100%' }}>
+    <div style={{ height: '100vh', width: '80%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyDy6MTf2nF4ScVrw1ekqNR-SMyWgzutBvA" }}
           defaultCenter={{lat: 23.684994,

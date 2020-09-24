@@ -33,13 +33,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Post = (props) => {
   
-  const {destination, img, key }= props;
-  // console.log(props.place.id);
+  const {destination, img, key }= props.place;
 
   const classes = useStyles();
   return (
     <div>
-      <h2>{key}</h2>
       <Card className={classes.root}>
 
         <CardHeader
