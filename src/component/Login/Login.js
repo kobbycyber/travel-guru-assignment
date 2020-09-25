@@ -97,11 +97,11 @@ const Login = () => {
                     label="New User Sign Up "
                 />
                 {newUser && <Form.Group controlId="formBasicName">
-                    <Form.Label>Name: {user.name}</Form.Label>
+                    
                     <Form.Control type="name" placeholder="your name" required />
                 </Form.Group>}
                 <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Email address: {user.email}</Form.Label>
+                    
                     <Form.Control type="email" name="email" onBlur={handleBlur} placeholder="Enter email" required />
                     <Form.Text className="text-muted">
                         We'll never share your email with anyone else.
@@ -109,7 +109,7 @@ const Login = () => {
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Password: {user.password}</Form.Label>
+                    
                     <Form.Control type="password" name="password" onBlur={handleBlur} placeholder="Password" required />
                 </Form.Group>
                 <input type="submit" value="Submit" />
