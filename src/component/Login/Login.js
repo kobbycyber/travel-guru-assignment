@@ -3,7 +3,6 @@ import './Login.css';
 import { UserContext } from '../../App'
 import { Form } from 'react-bootstrap';
 import { Button, Checkbox, FormControlLabel } from '@material-ui/core';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import { useHistory, useLocation } from 'react-router-dom';
 import { handleGoogleSignIn, initializeLoginFramework, handleSignOut, handleFbSignIn, createUserWithEmailAndPassword, signInWithEmailAndPassword } from './loginManager';
 
@@ -43,16 +42,16 @@ const Login = () => {
     const signOut = () => {
         handleSignOut()
             .then(res => {
-               handleResponse(res, false)
+                handleResponse(res, false)
             })
     }
 
     const handleResponse = (res, redirect) => {
         setUser(res);
         setLoggedInUser(res);
-      if(redirect){
-        history.replace(from);
-      }
+        if (redirect) {
+            history.replace(from);
+        }
     }
 
     const handleBlur = (e) => {
@@ -97,11 +96,11 @@ const Login = () => {
                     label="New User Sign Up "
                 />
                 {newUser && <Form.Group controlId="formBasicName">
-                    
+
                     <Form.Control type="name" placeholder="your name" required />
                 </Form.Group>}
                 <Form.Group controlId="formBasicEmail">
-                    
+
                     <Form.Control type="email" name="email" onBlur={handleBlur} placeholder="Enter email" required />
                     <Form.Text className="text-muted">
                         We'll never share your email with anyone else.
@@ -109,7 +108,7 @@ const Login = () => {
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
-                    
+
                     <Form.Control type="password" name="password" onBlur={handleBlur} placeholder="Password" required />
                 </Form.Group>
                 <input type="submit" value="Submit" />
@@ -131,9 +130,9 @@ const Login = () => {
                     </div>
                 }
                 <br />
+
                 <div className="p-4">
-                <FacebookIcon onClick={fbSignIn} > </FacebookIcon>
-                <Button variant="warning" >Sing in Facebook</Button>
+                    <Button variant="warning" onClick={fbSignIn} > Facebook Sing In</Button>
                 </div>
                 {
                     user.isSignedIn && <div>
