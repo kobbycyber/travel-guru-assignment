@@ -1,7 +1,7 @@
 
 import { Grid } from '@material-ui/core';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
-import React, { useState } from 'react';
+import React from 'react';
 import DateFnsUtils from '@date-io/date-fns';
 import { Button, Form } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 
 const CalenderDate = () => {
     const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
-    const history = useHistory()
+    const history = useHistory();
 
     const handleDateChange = (date) => {
         setSelectedDate(date);

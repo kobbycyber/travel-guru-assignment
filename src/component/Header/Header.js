@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
 import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import './Header.css';
-// import background '../../images/background.png'
-import logo from '../../images/Logo.png'
+import logo from '../../images/Logo.png';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 
@@ -11,7 +10,7 @@ import { UserContext } from '../../App';
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
-        <div  >
+        <div >
             <Navbar variant="Info fixed top">
                 <Navbar.Brand>
                     <img className="logo" src={logo} alt="" />

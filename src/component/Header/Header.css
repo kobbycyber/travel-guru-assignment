@@ -1,17 +1,7 @@
-body{
-    background-image: url("../../images/background.png")linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
-}
 .logo{
-    height: 100px;
+    height: 60px;
    
 }
-.background {
-  
-    min-height: 100vh;
-    background-position: center center;
-    background-size: 100% 100%;
-
-  }
   .title-container{
     color: rgba(255, 255, 255, 0.699);
     text-align: center;
@@ -19,6 +9,7 @@ body{
 }
 .nav{
     margin-left: 200px;
+    z-index: 1;
 }
 .nav li{
     display: inline;

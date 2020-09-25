@@ -3,6 +3,7 @@ import './Login.css';
 import { UserContext } from '../../App'
 import { Form } from 'react-bootstrap';
 import { Button, Checkbox, FormControlLabel } from '@material-ui/core';
+import FacebookIcon from '@material-ui/icons/Facebook';
 import { useHistory, useLocation } from 'react-router-dom';
 import { handleGoogleSignIn, initializeLoginFramework, handleSignOut, handleFbSignIn, createUserWithEmailAndPassword, signInWithEmailAndPassword } from './loginManager';
 
@@ -130,7 +131,10 @@ const Login = () => {
                     </div>
                 }
                 <br />
-                <Button variant="warning" onClick={fbSignIn}>Sing in Facebook</Button>
+                <div className="p-4">
+                <FacebookIcon onClick={fbSignIn} > </FacebookIcon>
+                <Button variant="warning" >Sing in Facebook</Button>
+                </div>
                 {
                     user.isSignedIn && <div>
                         <h4> {user.name}</h4>

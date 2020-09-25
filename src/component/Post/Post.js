@@ -7,14 +7,15 @@ import './Post.css';
 import { Link } from 'react-router-dom';
 
 
-import { Button } from '@material-ui/core';
-
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 330,
+    margin: 12,
+    textAlign:"center",
+    height: 460,
   },
   media: {
-    height: 350,
+    height: 340,
     width: 400,
     paddingTop: '56.25%', // 16:9
   },
@@ -39,7 +40,6 @@ const Post = (props) => {
   return (
     <div>
       <Card className={classes.root}>
-
         <CardHeader
           title={destination}
         />
@@ -47,11 +47,8 @@ const Post = (props) => {
           className={classes.media}
           image={img}
         />
-       <Button><Link  to={"/place/"+ key}>Details</Link></Button>
+       <Link className="detail-link"  to={"/place/"+ key}>Details</Link>
       </Card>
-
-
-
     </div>
   );
 };

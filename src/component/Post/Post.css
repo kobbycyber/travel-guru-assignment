@@ -1,16 +1,17 @@
-.card-item{
-    margin-top: 250px;
-  
-}
 .travel-place{
-    position: absolute;
-    /* bottom: 0; */
-    right: 0;
-     left: 0;
+    /* position: absolute;
+    ight: 0;
+    lefrt: 0;
     top: 0;
-    margin: auto;
+    margin: auto; */
     
 }
-.btn{
-    background-color: orange;
-  }
+.detail-link{
+    display: inline-block;
+   background-color: goldenrod;
+   padding: 0px 40px 0px 40px;
+   font-size: 24px;
+   border-radius: 10px;
+   margin: 10px;
+   
+}

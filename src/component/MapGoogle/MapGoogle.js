@@ -2,9 +2,7 @@ import React from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 const MapGoogle = () => {
-  const google = window.google;
-const data = this.props.data;
-const center = this.props.center;
+  
   return (
     <div>
       <Map google={this.props.google} zoom={10}>
