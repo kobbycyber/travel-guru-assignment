@@ -120,7 +120,7 @@ const Login = () => {
 
             <div>
                 {
-                    user.isSignedIn ? <Button variant="warning" onClick={signOut}>Google signOut</Button> :
+                    user.isSignedIn ? <Button onClick={signOut}>Google signOut</Button> :
                         <button onClick={googleSignIn}>Google signIn</button>
                 }
                 {
